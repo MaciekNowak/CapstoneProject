@@ -7,8 +7,13 @@ shinyUI(pageWithSidebar(
     
     mainPanel(
         tabsetPanel(
-            tabPanel("Text", br(), textOutput("ourOutput")),
-            tabPanel("Help/Documentation", br())
+            tabPanel("Text", br(),
+                     strong(textOutput("textLabel")),
+                     textOutput("ourOutput")),
+            tabPanel("Help/Usage", br(),
+                     textOutput("help1")),
+            tabPanel("Documentation", br(),
+                     textOutput("doc1"))
         )
     )
 ))
