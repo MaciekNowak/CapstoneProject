@@ -3,7 +3,9 @@ library(shiny)
 shinyUI(pageWithSidebar(
     headerPanel("The next word hinter"),
     
-    sidebarPanel(textInput(inputId = "ourInput", label = "Input Text")),
+    sidebarPanel(textInput(inputId = "ourInput", label = "Input Text"),
+                 submitButton("Submit"),
+                 h4("Please be patient")),
     
     mainPanel(
         tabsetPanel(
